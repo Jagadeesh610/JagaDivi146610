@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jagadeesh & Divyadharshini | Love Journey</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+</head>
+
+<body>
+    <div class="hearts-container"></div>
+
+    <!-- Audio Player -->
+    <audio id="bg-music" loop autoplay>
+        <source src="music.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <button id="music-btn" class="music-btn"><i class="fas fa-music"></i></button>
+
+    <!-- Hero Section -->
+    <header id="home">
+        <div class="hero-content">
+            <h1 class="couple-names">Jagadeesh <span class="heart-icon">❤️</span> Divyadharshini</h1>
+            <p class="subtitle">Together Forever & Always</p>
+            <div class="anniversary-date">Since March 29, 2022</div>
+
+            <div id="countdown" class="countdown-container">
+                <div class="time-box">
+                    <span id="days">00</span>
+                    <p>Days</p>
+                </div>
+                <div class="time-box">
+                    <span id="hours">00</span>
+                    <p>Hours</p>
+                </div>
+                <div class="time-box">
+                    <span id="minutes">00</span>
+                    <p>Mins</p>
+                </div>
+                <div class="time-box">
+                    <span id="seconds">00</span>
+                    <p>Secs</p>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-down">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </header>
+
+    <!-- Distance Map Section -->
+    <section id="map-section" class="section">
+        <h2 class="section-title">Different Cities, Same Heartbeat 🌍</h2>
+        <div id="map-container">
+            <div id="map"></div>
+        </div>
+        <p class="map-quote">"Distance means so little when someone means so much." ❤️</p>
+    </section>
+
+
+
+    <!-- Why I Love You Section -->
+    <section id="reasons-section" class="section">
+        <h2 class="section-title">Why I Love You</h2>
+        <div class="reasons-grid">
+            <div class="reason-card">
+                <div class="icon">❤️</div>
+                <h3>Your Smile</h3>
+                <p>It lights up my darkest days.</p>
+            </div>
+            <div class="reason-card">
+                <div class="icon">🤗</div>
+                <h3>Your Support</h3>
+                <p>You're always there for me, no matter what.</p>
+            </div>
+            <div class="reason-card">
+                <div class="icon">✨</div>
+                <h3>Your Spirit</h3>
+                <p>I love how passionate and kind you are.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section id="timeline-section" class="section">
+        <h2 class="section-title">Our Love Story</h2>
+        <div class="timeline">
+            <!-- 2022 -->
+            <div class="timeline-item left">
+                <div class="content">
+                    <h3>2022</h3>
+                    <p>The year our stars aligned. Every moment since has been magic.</p>
+                </div>
+            </div>
+            <!-- 2023 -->
+            <div class="timeline-item right">
+                <div class="content">
+                    <h3>2023</h3>
+                    <p>"I love you not only for what you are, but for what I am when I am with you."</p>
+                </div>
+            </div>
+            <!-- 2024 -->
+            <div class="timeline-item left">
+                <div class="content">
+                    <h3>2024</h3>
+                    <p>Growing stronger, laughing louder, and loving deeper every single day.</p>
+                </div>
+            </div>
+            <!-- 2025 -->
+            <div class="timeline-item right">
+                <div class="content">
+                    <h3>2025</h3>
+                    <p>Another year of making beautiful memories together.</p>
+                </div>
+            </div>
+            <!-- 2026 -->
+            <div class="timeline-item left">
+                <div class="content">
+                    <h3>Forever</h3>
+                    <p>To infinity and beyond. Happy Valentine's Day, my love!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </section>
+
+    <!-- Future Goals Section -->
+    <section id="goals-section" class="section">
+        <h2 class="section-title">Our Bucket List</h2>
+        <div class="goals-container">
+            <ul class="goals-list">
+                <li class="goal-item completed"><span class="check">✔</span> Fall in Love</li>
+                <li class="goal-item"><span class="check">⬜</span> Travel to Paris / Ooty</li>
+                <li class="goal-item"><span class="check">⬜</span> Adopt a Puppy</li>
+                <li class="goal-item"><span class="check">⬜</span> Build our Dream Home</li>
+                <li class="goal-item"><span class="check">⬜</span> Grow Old Together</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery-section" class="section">
+        <h2 class="section-title">Precious Moments</h2>
+        <div class="polaroid-gallery">
+            <!-- 40 Polaroids from Gallery Folder -->
+            <div class="polaroid">
+                <div class="inner">
+                    <div class="front"><img src="gallery/IMG-20240409-WA0002.jpg" alt="Memory"></div>
+                    <div class="back">Beautiful Day ❤️</div>
+                </div>
+            </div>
+            <div class="polaroid">
+                <div class="inner">
+                    <div class="front"><img src="gallery/IMG-20240705-WA0038.jpg" alt="Memory"></div>
+                    <div class="back">Sweet Smile 😊</div>
+                </div>
+            </div>
+            <div class="polaroid">
+                <div class="inner">
+                    <div class="front"><img src="gallery/IMG-20240705-WA0039.jpg" alt="Memory"></div>
+                    <div class="back">Just Us 💑</div>
+                </div>
+            </div>
+            <div class="polaroid">
+                <div class="inner">
+                    <div class="front"><img src="gallery/IMG-20241206-WA0092.jpg" alt="Memory"></div>
+                    <div class="back">Memories 📸</div>
+                </div>
+            </div>
+            <div class="polaroid">
+                <div class="inner">
+                    <div class="front"><img src="gallery/IMG-20250606-WA0001.jpg" alt="Memory"></div>
+                    <div class="back">Happiness 😄</div>
+                </div>
+            </div>
+            <div class="polaroid">
+                <div class="inner">
+                    <div class="front"><img src="gallery/IMG-20250606-WA0002.jpg" alt="Memory"></div>
+                    <div class="back">Together 💍</div>
+                </div>
+            </div>
+            <div class="polaroid">
+                <div class="inner">
+                    <div class="front"><img src="gallery/IMG-20250606-WA0003.jpg" alt="Memory"></div>
+                    <div class="back">More Love 💖</div>
+                </div>
+            </div>
+            <div class="polaroid">
+                <div class="inner">
+                    <div class="front"><img src="gallery/IMG_20230522_074539.jpg" alt="Memory"></div>
+                    <div class="back">Forever ♾️</div>
+                </div>
+            </div>
+            <div class="polaroid">
+                <div class="inner">
+                    <div class="front"><img src="gallery/IMG_20230524_202122.jpg" alt="Memory"></div>
+                    <div class="back">My Heart 💜</div>
+                </div>
+            </div>
+            <div class="polaroid">
+                <div class="inner">
+                    <div class="front"><img src="gallery/IMG_20230526_055553.jpg" alt="Memory"></div>
+                    <div class="back">Adventures 🌍</div>
+                </div>
+            </div>
+            <div class="polaroid">
+                <div class="inner">
+                    <div class="front"><img src="gallery/IMG_20230614_120644.jpg" alt="Memory"></div>
+                    <div class="back">Happy Times 🎉</div>
+                </div>
+            </div>
+            <div class="polaroid">
+                <div class="inner">
+                    <div class="front"><img src="gallery/IMG_20230731_120852.jpg" alt="Memory"></div>
+                    <div class="back">Best Day 🌟</div>
+                </div>
+            </div>
+            <div class="polaroid">
+                <div class="inner">
+                    <div class="front"><img src="gallery/IMG_20231118_102824.jpg" alt="Memory"></div>
+                    <div class="back">So Cute 🥰</div>
+                </div>
+            </div>
+            <div class="polaroid">
+                <div class="inner">
+                    <div class="front"><img src="gallery/IMG_20240216_174357.jpg" alt="Memory"></div>
+                    <div class="back">Lovely 🌺</div>
+                </div>
+            </div>
+            <div class="polaroid">
+                <div class="inner">
+                    <div class="front"><img src="gallery/IMG_20241031_195320.jpg" alt="Memory"></div>
+                    <div class="back">Always 💐</div>
+                </div>
+            </div>
+            <div class="polaroid">
+                <div class="inner">
+                    <div class="front"><img src="gallery/IMG_20241102_165447.jpg" alt="Memory"></div>
+                    <div class="back">Magic ✨</div>
+                </div>
+            </div>
+            <div class="polaroid">
+                <div class="inner">
+                    <div class="front"><img src="gallery/IMG_20241201_171154.jpg" alt="Memory"></div>
+                    <div class="back">Us 🤞</div>
+                </div>
+            </div>
+            <div class="polaroid">
+                <div class="inner">
+                    <div class="front"><img src="gallery/IMG_20250119_160710.jpg" alt="Memory"></div>
+                    <div class="back">Precious 💎</div>
+                </div>
+            </div>
+            <div class="polaroid">
+                <div class="inner">
+                    <div class="front"><img src="gallery/IMG_20250411_131242.jpg" alt="Memory"></div>
+                    <div class="back">Smile 😃</div>
+                </div>
+            </div>
+            <div class="polaroid">
+                <div class="inner">
+                    <div class="front"><img src="gallery/IMG_20250614_114031.jpg" alt="Memory"></div>
+                    <div class="back">Love You 💟</div>
+                </div>
+            </div>
+            <div class="polaroid">
+                <div class="inner">
+                    <div class="front"><img src="gallery/Snapchat-1039224638.jpg" alt="Memory"></div>
+                    <div class="back">Fun Times 🤪</div>
+                </div>
+            </div>
+            <div class="polaroid">
+                <div class="inner">
+                    <div class="front"><img src="gallery/Snapchat-106525301.jpg" alt="Memory"></div>
+                    <div class="back">Silly Us 😜</div>
+                </div>
+            </div>
+            <div class="polaroid">
+                <div class="inner">
+                    <div class="front"><img src="gallery/Snapchat-111786921.jpg" alt="Memory"></div>
+                    <div class="back">Cuties 😉</div>
+                </div>
+            </div>
+            <div class="polaroid">
+                <div class="inner">
+                    <div class="front"><img src="gallery/Snapchat-1195407184.jpg" alt="Memory"></div>
+                    <div class="back">Snap! 📸</div>
+                </div>
+            </div>
+            <div class="polaroid">
+                <div class="inner">
+                    <div class="front"><img src="gallery/Snapchat-1244421418.jpg" alt="Memory"></div>
+                    <div class="back">Filters 🐶</div>
+                </div>
+            </div>
+            <div class="polaroid">
+                <div class="inner">
+                    <div class="front"><img src="gallery/Snapchat-1246274331.jpg" alt="Memory"></div>
+                    <div class="back">Posers 😎</div>
+                </div>
+            </div>
+            <div class="polaroid">
+                <div class="inner">
+                    <div class="front"><img src="gallery/Snapchat-142302542.jpg" alt="Memory"></div>
+                    <div class="back">XOXO 💋</div>
+                </div>
+            </div>
+            <div class="polaroid">
+                <div class="inner">
+                    <div class="front"><img src="gallery/Snapchat-1899705841.jpg" alt="Memory"></div>
+                    <div class="back">Hugs 🤗</div>
+                </div>
+            </div>
+            <div class="polaroid">
+                <div class="inner">
+                    <div class="front"><img src="gallery/Snapchat-2085757373.jpg" alt="Memory"></div>
+                    <div class="back">Kisses 😘</div>
+                </div>
+            </div>
+            <div class="polaroid">
+                <div class="inner">
+                    <div class="front"><img src="gallery/Snapchat-235498656.jpg" alt="Memory"></div>
+                    <div class="back">BFFs 👯</div>
+                </div>
+            </div>
+            <div class="polaroid">
+                <div class="inner">
+                    <div class="front"><img src="gallery/Snapchat-274678000.jpg" alt="Memory"></div>
+                    <div class="back">Soulmates 💑</div>
+                </div>
+            </div>
+            <div class="polaroid">
+                <div class="inner">
+                    <div class="front"><img src="gallery/Snapchat-282647018.jpg" alt="Memory"></div>
+                    <div class="back">My Fav 🤩</div>
+                </div>
+            </div>
+            <div class="polaroid">
+                <div class="inner">
+                    <div class="front"><img src="gallery/Snapchat-314146230.jpg" alt="Memory"></div>
+                    <div class="back">Sunshine ☀️</div>
+                </div>
+            </div>
+            <div class="polaroid">
+                <div class="inner">
+                    <div class="front"><img src="gallery/Snapchat-3312840.jpg" alt="Memory"></div>
+                    <div class="back">Moonlight 🌙</div>
+                </div>
+            </div>
+            <div class="polaroid">
+                <div class="inner">
+                    <div class="front"><img src="gallery/Snapchat-536752347.jpg" alt="Memory"></div>
+                    <div class="back">Stars ✨</div>
+                </div>
+            </div>
+            <div class="polaroid">
+                <div class="inner">
+                    <div class="front"><img src="gallery/Snapchat-60068420.jpg" alt="Memory"></div>
+                    <div class="back">Universe 🌌</div>
+                </div>
+            </div>
+            <div class="polaroid">
+                <div class="inner">
+                    <div class="front"><img src="gallery/Snapchat-608018098.jpg" alt="Memory"></div>
+                    <div class="back">Everything 🌎</div>
+                </div>
+            </div>
+            <div class="polaroid">
+                <div class="inner">
+                    <div class="front"><img src="gallery/Snapchat-6097749.jpg" alt="Memory"></div>
+                    <div class="back">Only You ☝️</div>
+                </div>
+            </div>
+            <div class="polaroid">
+                <div class="inner">
+                    <div class="front"><img src="gallery/Snapchat-612744443.jpg" alt="Memory"></div>
+                    <div class="back">True Love 💝</div>
+                </div>
+            </div>
+            <div class="polaroid">
+                <div class="inner">
+                    <div class="front"><img src="gallery/Snapchat-85652754.jpg" alt="Memory"></div>
+                    <div class="back">Forever & Always ♾️</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quiz Section -->
+    <section id="quiz-section" class="section">
+        <h2 class="section-title">How well do you know us?</h2>
+
+        <div class="quiz-container glass-card">
+            <div class="progress-bar">
+                <div class="progress" id="quiz-progress"></div>
+            </div>
+
+            <!-- Question 1 -->
+            <div class="question-card active" id="q1">
+                <h3>1. Do you love me more than any one else? 🍕</h3>
+                <div class="options">
+                    <button class="btn btn-yes" onclick="nextQuestion(1)">Yes, obviously! 😋</button>
+                    <button class="btn btn-no" onclick="handleNoClick(this)">Define "love"...</button>
+                </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="question-card" id="q2">
+                <h3>2. Who is the cuter one in this relationship? 😉</h3>
+                <div class="options">
+                    <button class="btn btn-yes" onclick="nextQuestion(2)">Me (Divya) obviously! 👸</button>
+                    <button class="btn btn-yes" onclick="nextQuestion(2)">You (Jaga) 🤴</button>
+                </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="question-card" id="q3">
+                <h3>3. What's my favorite thing about you? ❤️</h3>
+                <div class="options">
+                    <button class="btn btn-yes" onclick="nextQuestion(3)">My Smile 😊</button>
+                    <button class="btn btn-no" onclick="handleNoClick(this)">My Angry Face 😡</button>
+                </div>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="question-card" id="q4">
+                <h3>4. Where do we want to travel next? ✈️</h3>
+                <div class="options">
+                    <button class="btn btn-yes" onclick="nextQuestion(4)">Paris / Ooty 🗼</button>
+                    <button class="btn btn-no" onclick="handleNoClick(this)">Mars 👽</button>
+                </div>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="question-card" id="q5">
+                <h3>5. Are you ready for a lifetime of annoyance (and love)? 😘</h3>
+                <div class="options">
+                    <button class="btn btn-yes" onclick="nextQuestion(5)">Born ready! 💪</button>
+                    <button class="btn btn-no" onclick="handleNoClick(this)">Can I get a trial? 🧐</button>
+                </div>
+            </div>
+
+            <!-- Question 6 -->
+            <div class="question-card" id="q6">
+                <h3>6. Will you be my Valentine forever? 🌹</h3>
+                <div class="options">
+                    <button class="btn btn-yes" onclick="showFinalMessage()">YES! A thousand times Yes! 💖</button>
+                    <button class="btn btn-no" onclick="handleNoClick(this)">Hmm... 🤔</button>
+                </div>
+            </div>
+
+            <div class="final-message hidden" id="final-msg">
+                <h3>YAY! 🎉</h3>
+                <p>You're stuck with me now! I love you so much, Divyadharshini! ❤️</p>
+                <div class="confetti"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Page (Hidden by default) -->
+    <div id="success-page" class="success-page hidden">
+        <div class="success-content">
+            <h1 class="success-title">100% Correct! 🎉</h1>
+            <div class="couple-image-container">
+                <img src="couple.png" alt="Us" class="main-image">
+            </div>
+            <p class="love-quote">
+                "I choose you. And I'll choose you over and over and over. Without pause, without a doubt, in a
+                heartbeat. I'll keep choosing you." ❤️
+            </p>
+            <button class="btn btn-yes" onclick="location.reload()">Replay Our Love Story 🔄</button>
+        </div>
+
+        <!-- Floating Characters -->
+        <img src="bear.png" class="floating-char char-1" alt="Teddy">
+        <img src="panda.png" class="floating-char char-2" alt="Dudu">
+        <img src="bear.png" class="floating-char char-3" alt="Bubu">
+    </div>
+
+    <!-- Custom Modal -->
+    <div id="love-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <p id="modal-text">Message goes here!</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>Made with ❤️ by Jagadeesh | Happy Valentine's Day</p>
+    </footer>
+
+    <script src="quotes.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
